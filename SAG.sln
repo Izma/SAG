@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27004.2008
+VisualStudioVersion = 15.0.27004.2009
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SAG", "SAG\SAG.csproj", "{4BF43950-2D98-4BBC-8F93-944C4CC6CBD2}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "SAGDB", "SAGDB\SAGDB.sqlproj", "{4B424270-5B2F-4A7F-8547-B79EF00A45D5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,12 @@ Global
 		{4BF43950-2D98-4BBC-8F93-944C4CC6CBD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4BF43950-2D98-4BBC-8F93-944C4CC6CBD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4BF43950-2D98-4BBC-8F93-944C4CC6CBD2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4B424270-5B2F-4A7F-8547-B79EF00A45D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B424270-5B2F-4A7F-8547-B79EF00A45D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B424270-5B2F-4A7F-8547-B79EF00A45D5}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{4B424270-5B2F-4A7F-8547-B79EF00A45D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B424270-5B2F-4A7F-8547-B79EF00A45D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4B424270-5B2F-4A7F-8547-B79EF00A45D5}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
