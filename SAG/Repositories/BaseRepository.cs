@@ -10,23 +10,30 @@ namespace SAG.Repositories
 {
     public abstract class BaseRepository
     {
+        private readonly string _connectionString;
+
+        public BaseRepository(string connectionString)
+        {
+            _connectionString = connectionString;
+        }
+
         protected async Task<T> WithConnection<T>(Func<IDbConnection, Task<T>> getData)
         {
             try
             {
-                using (var connection = new SqlConnection(Connection.GetConnectionString))
+                using (var connection = new SqlConnection(_connectionString))
                 {
-                    await connection.OpenAsync();
-                    return await getData(connection);
+                    await connection.OpenAsync(); // Asynchronously open a connection to the database
+                    return await getData(connection); // Asynchronously execute getData, which has been passed in as a Func<IDBConnection, Task<T>>
                 }
             }
             catch (TimeoutException ex)
             {
-                throw new Exception(string.Format("{0}.WithConnection() experienced a SQL timeout", GetType().FullName), ex);
+                throw new Exception(String.Format("{0}.WithConnection() experienced a SQL timeout", GetType().FullName), ex);
             }
             catch (SqlException ex)
             {
-                throw new Exception(string.Format("{0}.WithConnection() experienced  SQL exception(not a timeout", GetType().FullName), ex);
+                throw new Exception(String.Format("{0}.WithConnection() experienced a SQL exception (not a timeout)", GetType().FullName), ex);
             }
         }
     }

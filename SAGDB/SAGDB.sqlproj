@@ -58,10 +58,27 @@
   <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
   <ItemGroup>
     <Folder Include="Properties" />
-    <Folder Include="dbo" />
+    <Folder Include="Tables" />
+    <Folder Include="Programmability" />
+    <Folder Include="Tables\dbo" />
+    <Folder Include="Programmability\Stored Procedures" />
+    <Folder Include="Programmability\Functions" />
+    <Folder Include="Programmability\Functions\Scalar-valued Functions" />
   </ItemGroup>
   <ItemGroup>
-    <Build Include="dbo\Users.sql" />
+    <Build Include="Tables\dbo\Users.sql" />
+    <Build Include="Programmability\Stored Procedures\sp_RegisterUser.sql" />
+    <Build Include="Tables\dbo\Vehicles.sql" />
+    <Build Include="Tables\dbo\Status.sql" />
+    <Build Include="Tables\dbo\Persons.sql" />
+    <Build Include="Tables\dbo\Phones.sql" />
+    <Build Include="Programmability\Stored Procedures\sp_RegisterPerson.sql" />
+    <Build Include="Tables\dbo\Roles.sql" />
+    <Build Include="Programmability\Stored Procedures\sp_ValidateUser.sql" />
+    <Build Include="Programmability\Stored Procedures\sp_GetInfoUser.sql" />
+    <Build Include="Tables\dbo\Menus.sql" />
+    <Build Include="Programmability\Stored Procedures\sp_RegisterMenu.sql" />
+    <Build Include="Programmability\Stored Procedures\sp_GetMenu.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="SAGDB.refactorlog" />

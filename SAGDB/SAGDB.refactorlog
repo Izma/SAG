@@ -7,4 +7,67 @@
     <Property Name="ParentElementType" Value="SqlTable" />
     <Property Name="NewName" Value="UserId" />
   </Operation>
+  <Operation Name="Rename Refactor" Key="72b4aa21-1af9-4b4d-a2d3-6044b2326b64" ChangeDateTime="12/13/2017 03:08:18">
+    <Property Name="ElementName" Value="[dbo].[Vehicles].[vehicleID]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Vehicles]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="VehicleID" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="4f5fb9bc-77a5-40f0-9680-eaf30f780e47" ChangeDateTime="12/13/2017 03:15:03">
+    <Property Name="ElementName" Value="[dbo].[Vehicles].[DateRegistered]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Vehicles]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="DateRegister" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="d6426fba-5897-43d0-9371-cc49905893ee" ChangeDateTime="12/13/2017 03:16:09">
+    <Property Name="ElementName" Value="[dbo].[Status].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Status]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="StatusID" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="2e87ff79-bfa7-4124-8ffd-91c97330bff8" ChangeDateTime="12/13/2017 03:20:09">
+    <Property Name="ElementName" Value="[dbo].[Person].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Person]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="PersonID" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="25be034a-f66f-4273-8636-9c417c996a98" ChangeDateTime="12/13/2017 03:22:58">
+    <Property Name="ElementName" Value="[dbo].[Person].[Birthdate]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Person]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="BirthDate" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="101692c4-543d-43c5-a26e-6e51c5112ff1" ChangeDateTime="12/13/2017 03:23:12">
+    <Property Name="ElementName" Value="[dbo].[Person].[Genre]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Person]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Genere" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="45383c3b-a074-426b-b6ed-93489a5484bc" ChangeDateTime="12/13/2017 03:28:47">
+    <Property Name="ElementName" Value="[dbo].[Phones].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Phones]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="PhoneID" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="40d80a92-d8f0-4ec9-81c1-c3ba9dc5143c" ChangeDateTime="02/13/2018 04:32:59">
+    <Property Name="ElementName" Value="[dbo].[Menus].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Menus]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="MenuID" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="74e82652-2826-4d7f-bd22-0747b4eee53c" ChangeDateTime="02/13/2018 04:35:46">
+    <Property Name="ElementName" Value="[dbo].[Menus].[UserRegist]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Menus]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="DateRegister" />
+  </Operation>
 </Operations>

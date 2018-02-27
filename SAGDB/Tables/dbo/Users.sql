@@ -2,7 +2,7 @@
 (
 	[UserId] UNIQUEIDENTIFIER NOT NULL PRIMARY KEY, 
     [Email] VARCHAR(255) NOT NULL, 
-    [Password] VARCHAR(255) NULL, 
+    [Password] VARBINARY(8000) NULL, 
     [Name] VARCHAR(50) NOT NULL, 
     [MiddleName] VARCHAR(40) NOT NULL, 
     [LastName] VARCHAR(40) NULL, 
