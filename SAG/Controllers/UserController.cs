@@ -2,7 +2,6 @@
 using SAG.Models;
 using System.Threading.Tasks;
 using System.Web.Http;
-using SAG.Filters;
 
 namespace SAG.Controllers
 {

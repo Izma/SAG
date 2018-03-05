@@ -6,7 +6,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Web.Http;
 
-namespace SAG.Filters
+namespace SAG
 {
     public class AddChallengeOnUnauthorizedResult : IHttpActionResult
     {

@@ -9,7 +9,7 @@ using SAG.Helpers;
 namespace SAG.Controllers
 {
     [RoutePrefix("api/menu")]
-    [AllowAnonymous]
+    [JwtAuthentication]
     public class MenuController : ApiController
     {
         private readonly IMenu repository;
@@ -29,7 +29,7 @@ namespace SAG.Controllers
                 {
                     Title = element.Description,
                     Link = element.Route,
-                    SubItems = children.ToList()
+                    SubItems = children.ToList().Count > 0 ? children.ToList() : null
                 }).ToList();
             if (menuList.Count() > 0)
             {
