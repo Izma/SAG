@@ -4,7 +4,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Web.Http;
 
-namespace SAG
+namespace SAG.Filters
 {
     public class AuthenticationFailureResult : IHttpActionResult
     {
@@ -18,9 +18,9 @@ namespace SAG
 
         public HttpRequestMessage Request { get; }
 
-        public Task<HttpResponseMessage> ExecuteAsync(CancellationToken cancellationToken)
+        public async Task<HttpResponseMessage> ExecuteAsync(CancellationToken cancellationToken)
         {
-            return Task.FromResult(Execute());
+            return await Task.FromResult(Execute());
         }
 
         private HttpResponseMessage Execute()

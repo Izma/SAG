@@ -2,7 +2,7 @@
 using System.Net.Http.Headers;
 using System.Web.Http.Filters;
 
-namespace SAG
+namespace SAG.Filters
 {
     public static class HttpAuthenticationChallengeContextExtensions
     {

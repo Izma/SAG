@@ -6,7 +6,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Web.Http.Filters;
 
-namespace SAG
+namespace SAG.Filters
 {
     public class JwtAuthenticationAttribute : Attribute, IAuthenticationFilter
     {

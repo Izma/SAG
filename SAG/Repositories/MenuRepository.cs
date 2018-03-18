@@ -11,7 +11,7 @@ namespace SAG.Repositories
 {
     public class MenuRepository : BaseRepository, IMenu
     {
-        public MenuRepository(string connectionString) : base(connectionString)
+        public MenuRepository(IConnectionFactory connection) : base(connection)
         {
         }
 

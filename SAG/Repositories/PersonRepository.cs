@@ -10,7 +10,7 @@ namespace SAG.Repositories
 {
     public class PersonRepository : BaseRepository, IPerson
     {
-        public PersonRepository(string connectionString) : base(connectionString)
+        public PersonRepository(IConnectionFactory connection) : base(connection)
         {
         }
 

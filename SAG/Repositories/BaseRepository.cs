@@ -5,23 +5,25 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Web;
+using SAG.Helpers;
+using SAG.Interfaces;
 
 namespace SAG.Repositories
 {
     public abstract class BaseRepository
     {
-        private readonly string _connectionString;
+        private readonly IConnectionFactory connectionFactory;
 
-        public BaseRepository(string connectionString)
+        public BaseRepository(IConnectionFactory connection)
         {
-            _connectionString = connectionString;
+            connectionFactory = connection;
         }
 
         protected async Task<T> WithConnection<T>(Func<IDbConnection, Task<T>> getData)
         {
             try
             {
-                using (var connection = new SqlConnection(_connectionString))
+                using (var connection = connectionFactory.CreateConnection())
                 {
                     await connection.OpenAsync(); // Asynchronously open a connection to the database
                     return await getData(connection); // Asynchronously execute getData, which has been passed in as a Func<IDBConnection, Task<T>>

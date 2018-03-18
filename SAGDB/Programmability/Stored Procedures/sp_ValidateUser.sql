@@ -8,7 +8,7 @@ BEGIN
 					VARCHAR (255),
 					DECRYPTBYPASSPHRASE (
 						'SAGP@$$w0rd!!#',
-						u.password
+						u.Password
 					)
 				)
 			FROM

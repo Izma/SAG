@@ -5,6 +5,8 @@ using System.Web.Http;
 using SAG.Models;
 using System.Linq;
 using SAG.Helpers;
+using SAG.Filters;
+using System;
 
 namespace SAG.Controllers
 {
@@ -23,19 +25,25 @@ namespace SAG.Controllers
         [Route("")]
         public async Task<IHttpActionResult> GetMenu()
         {
-            var result = await repository.GetMenu();
-            IEnumerable<MenuItemModel> menuList = result.RecursiveJoin(item => item.MenuID, item => item.ParentID,
-                (MenuModel element, IEnumerable<MenuItemModel> children) => new MenuItemModel()
-                {
-                    Title = element.Description,
-                    Link = element.Route,
-                    SubItems = children.ToList().Count > 0 ? children.ToList() : null
-                }).ToList();
-            if (menuList.Count() > 0)
+            try
             {
-                return Ok(menuList);
+                var result = await repository.GetMenu();
+                IEnumerable<MenuItemModel> menuList = result.RecursiveJoin(item => item.MenuID, item => item.ParentID,
+                    (MenuModel element, IEnumerable<MenuItemModel> children) => new MenuItemModel()
+                    {
+                        Title = element.Description,
+                        Link = element.Route,
+                        SubItems = children.ToList().Count > 0 ? children.ToList() : null
+                    }).ToList();
+                if (menuList.Count() > 0)
+                {
+                    return Ok(menuList);
+                }
             }
-
+            catch (Exception ex)
+            {
+                return InternalServerError(ex);
+            }
             return NotFound();
         }
 

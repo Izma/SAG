@@ -5,6 +5,7 @@ using System.Web.Http;
 using SAG.Repositories;
 using SAG.Interfaces;
 using Autofac.Features.ResolveAnything;
+using SAG.Helpers;
 
 namespace SAG
 {
@@ -29,11 +30,12 @@ namespace SAG
         {
             builder.RegisterApiControllers(Assembly.GetExecutingAssembly());
             builder.RegisterWebApiModelBinderProvider();
-            builder.RegisterType<UserRepository>().As<IUser>().WithParameter("connectionString", Connection.GetConnectionString);
-            builder.RegisterType<PersonRepository>().As<IPerson>().WithParameter("connectionString", Connection.GetConnectionString);
-            builder.RegisterType<ValidateRepository>().As<IValidate>().WithParameter("connectionString", Connection.GetConnectionString);
-            builder.RegisterType<InfoUserRepository>().As<IInfoUser>().WithParameter("connectionString", Connection.GetConnectionString);
-            builder.RegisterType<MenuRepository>().As<IMenu>().WithParameter("connectionString", Connection.GetConnectionString);
+            builder.RegisterType<ConnectionFactory>().As<IConnectionFactory>().WithParameter("connection", Connection.GetConnectionString);
+            builder.RegisterType<UserRepository>().As<IUser>();
+            builder.RegisterType<PersonRepository>().As<IPerson>();
+            builder.RegisterType<ValidateRepository>().As<IValidate>();
+            builder.RegisterType<InfoUserRepository>().As<IInfoUser>();
+            builder.RegisterType<MenuRepository>().As<IMenu>();
             builder.RegisterSource(new AnyConcreteTypeNotAlreadyRegisteredSource());
             Container = builder.Build();
             return Container;

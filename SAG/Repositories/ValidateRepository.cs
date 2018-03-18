@@ -9,7 +9,7 @@ namespace SAG.Repositories
 {
     public class ValidateRepository : BaseRepository, IValidate
     {
-        public ValidateRepository(string connectionString) : base(connectionString)
+        public ValidateRepository(IConnectionFactory connection) : base(connection)
         {
         }
 
@@ -24,7 +24,7 @@ namespace SAG.Repositories
                     sql: "[dbo].[sp_ValidateUser]",
                     param: dynamicParameters,
                     commandType: CommandType.StoredProcedure);
-                return result.FirstOrDefault();
+                 return result.FirstOrDefault();
              });
         }
     }

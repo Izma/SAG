@@ -18,18 +18,6 @@ namespace SAG.Controllers
             infoUserRepository = _infoUser;
         }
 
-        [HttpPost]
-        [AllowAnonymous]
-        [Route("")]
-        public async Task<IHttpActionResult> Demo(int id)
-        {
-            await Task.Run(() =>
-            {
-                var user = "Ismael";
-            });
-            return Ok(id);
-        }
-
         // THis is naive endpoint for demo, it should use Basic authentication to provide token or POST request
         [HttpPost]
         [Route("")]
