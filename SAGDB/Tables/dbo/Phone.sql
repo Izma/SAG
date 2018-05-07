@@ -1,4 +1,4 @@
-﻿CREATE TABLE [dbo].[Phones]
+﻿CREATE TABLE [dbo].[Phone]
 (
 	[PhoneID] INT NOT NULL PRIMARY KEY, 
     [PersonID] VARCHAR(255) NOT NULL, 

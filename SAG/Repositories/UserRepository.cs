@@ -27,7 +27,7 @@ namespace SAG.Repositories
                 parameters.Add("@NickName", model.NickName, DbType.String, ParameterDirection.Input, 20);
                 parameters.Add("@UserRegister", model.Username, DbType.String, ParameterDirection.Input, 255);
                 var result = await c.QueryAsync<Result>(
-                    sql: "[dbo].[sp_RegisterUser]",
+                    sql: "[dbo].[spRegisterUser]",
                     param: parameters,
                     commandType: CommandType.StoredProcedure);
                 return result.FirstOrDefault();

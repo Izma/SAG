@@ -1,4 +1,4 @@
-﻿CREATE TABLE [dbo].[Vehicles]
+﻿CREATE TABLE [dbo].[Vehicle]
 (
 	[VehicleID] UNIQUEIDENTIFIER NOT NULL PRIMARY KEY, 
     [CustomID] VARCHAR(50) NULL, 

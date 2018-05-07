@@ -3,7 +3,7 @@
 -- Create date: 29-11-2017
 -- Description:	New user
 -- =============================================
-CREATE PROCEDURE [dbo].[sp_RegisterUser] @Email        VARCHAR(255),
+CREATE PROCEDURE [dbo].[spRegisterUser] @Email        VARCHAR(255),
                            @Password     VARCHAR(255),
                            @Name         VARCHAR(50),
                            @MiddleName   VARCHAR(40),
@@ -13,7 +13,7 @@ CREATE PROCEDURE [dbo].[sp_RegisterUser] @Email        VARCHAR(255),
 AS
      BEGIN
          BEGIN TRY
-             INSERT INTO [dbo].[Users]
+             INSERT INTO [dbo].[User]
              ([UserId],
               [Email],
               [Password],

@@ -45,11 +45,5 @@ namespace SAG.Controllers
                 return Ok(message);
             return InternalServerError();
         }
-
-        public bool CheckUser(string username, string password)
-        {
-            // should check in the database
-            return true;
-        }
     }
 }

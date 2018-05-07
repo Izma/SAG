@@ -1,4 +1,4 @@
-﻿CREATE TABLE [dbo].[Menus]
+﻿CREATE TABLE [dbo].[Menu]
 (
 	[MenuID] INT NOT NULL PRIMARY KEY IDENTITY, 
     [Description] VARCHAR(100) NOT NULL, 

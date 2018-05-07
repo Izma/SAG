@@ -1,4 +1,4 @@
-﻿CREATE PROCEDURE [dbo].[sp_GetMenu]
+﻿CREATE PROCEDURE [dbo].[spGetMenu]
 	@menuID int =0
 AS
  IF @menuID=0 
@@ -8,7 +8,7 @@ AS
 	m.ParentID,
 	m.Route
 FROM
-	Menus m
+	Menu m
 WHERE
 	m.IsActive = 1
 	ELSE 
@@ -18,7 +18,7 @@ WHERE
 	m.ParentID,
 	m.Route
 FROM
-	Menus m
+	Menu m
 WHERE
 	m.IsActive = 1
 	AND m.MenuID=@menuID;

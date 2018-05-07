@@ -47,6 +47,23 @@ namespace SAG.Controllers
             return NotFound();
         }
 
+        [HttpPost]
+        public async Task<IHttpActionResult> SaveMenu([FromBody] MenuModel model)
+        {
+            try
+            {
+                var result = await repository.SaveMenu(model);
+                if (result.Msg == "success")
+                {
+                    return Ok(result);
+                }
+            }
+            catch (Exception ex)
+            {
+                return InternalServerError(ex);
+            }
+            return InternalServerError();
+        }
 
     }
 }

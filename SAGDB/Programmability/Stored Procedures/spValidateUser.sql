@@ -1,4 +1,4 @@
-﻿CREATE PROCEDURE dbo.sp_ValidateUser @email VARCHAR (255),
+﻿CREATE PROCEDURE dbo.spValidateUser @email VARCHAR (255),
  @password VARCHAR (255) AS
 BEGIN
 	DECLARE
@@ -12,7 +12,7 @@ BEGIN
 					)
 				)
 			FROM
-				Users AS u
+				[dbo].[User] AS u
 			WHERE
 				u.Email = @email
 		) ;
@@ -20,7 +20,7 @@ BEGIN
 		1 AS code,
 		CONVERT (VARCHAR(255), u.UserId) AS userId
 	FROM
-		Users AS u
+		[dbo].[User] AS u
 	WHERE
 		u.Email = @email
 	IF @password <> @pass SELECT
@@ -32,7 +32,7 @@ BEGIN
 				SELECT
 					u.Email
 				FROM
-					Users u
+					[dbo].[User] u
 				WHERE
 					u.Email =@email
 			)

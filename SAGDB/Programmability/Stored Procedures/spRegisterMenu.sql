@@ -1,4 +1,4 @@
-﻿CREATE PROCEDURE [dbo].[sp_RegisterMenu] 
+﻿CREATE PROCEDURE [dbo].[spRegisterMenu] 
 	@Description VARCHAR(100),
 	@Route VARCHAR(150),
 	@ParentID INT,
@@ -7,7 +7,7 @@
 	AS
 BEGIN
 BEGIN TRY
-	INSERT INTO [dbo].[Menus] (
+	INSERT INTO [dbo].[Menu] (
 		[Description],
 		[Route],
 		[ParentID],

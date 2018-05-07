@@ -21,7 +21,7 @@ namespace SAG.Repositories
                 var dynamicParameters = new DynamicParameters();
                 dynamicParameters.Add("@userId", userId, DbType.String, ParameterDirection.Input, 255);
                 var result = await c.QueryAsync<InfoUserModel>(
-                   sql: "[dbo].[sp_GetInfoUser]",
+                   sql: "[dbo].[spGetInfoUser]",
                    param: dynamicParameters,
                    commandType: CommandType.StoredProcedure);
                 return result.FirstOrDefault();

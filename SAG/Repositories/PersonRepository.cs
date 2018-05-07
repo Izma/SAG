@@ -31,7 +31,7 @@ namespace SAG.Repositories
                 parameters.Add("@status", model.Height, DbType.Boolean, ParameterDirection.Input);
                 parameters.Add("@UserRegister", model.UserRegister, DbType.String, ParameterDirection.Input, 50);
                 var result = await q.QueryAsync<Result>(
-                    sql: "[dbo].[sp_RegisterPerson]",
+                    sql: "[dbo].[spRegisterPerson]",
                     param: parameters,
                     commandType: CommandType.StoredProcedure);
                 return result.FirstOrDefault();

@@ -66,19 +66,19 @@
     <Folder Include="Programmability\Functions\Scalar-valued Functions" />
   </ItemGroup>
   <ItemGroup>
-    <Build Include="Tables\dbo\Users.sql" />
-    <Build Include="Programmability\Stored Procedures\sp_RegisterUser.sql" />
-    <Build Include="Tables\dbo\Vehicles.sql" />
+    <Build Include="Tables\dbo\User.sql" />
+    <Build Include="Programmability\Stored Procedures\spRegisterUser.sql" />
+    <Build Include="Tables\dbo\Vehicle.sql" />
     <Build Include="Tables\dbo\Status.sql" />
-    <Build Include="Tables\dbo\Persons.sql" />
-    <Build Include="Tables\dbo\Phones.sql" />
-    <Build Include="Programmability\Stored Procedures\sp_RegisterPerson.sql" />
-    <Build Include="Tables\dbo\Roles.sql" />
-    <Build Include="Programmability\Stored Procedures\sp_ValidateUser.sql" />
-    <Build Include="Programmability\Stored Procedures\sp_GetInfoUser.sql" />
-    <Build Include="Tables\dbo\Menus.sql" />
-    <Build Include="Programmability\Stored Procedures\sp_RegisterMenu.sql" />
-    <Build Include="Programmability\Stored Procedures\sp_GetMenu.sql" />
+    <Build Include="Tables\dbo\Person.sql" />
+    <Build Include="Tables\dbo\Phone.sql" />
+    <Build Include="Programmability\Stored Procedures\spRegisterPerson.sql" />
+    <Build Include="Tables\dbo\Rol.sql" />
+    <Build Include="Programmability\Stored Procedures\spValidateUser.sql" />
+    <Build Include="Programmability\Stored Procedures\spGetInfoUser.sql" />
+    <Build Include="Tables\dbo\Menu.sql" />
+    <Build Include="Programmability\Stored Procedures\spRegisterMenu.sql" />
+    <Build Include="Programmability\Stored Procedures\spGetMenu.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="SAGDB.refactorlog" />

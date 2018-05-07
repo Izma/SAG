@@ -21,7 +21,7 @@ namespace SAG.Repositories
                  dynamicParameters.Add("@email", email, DbType.String, ParameterDirection.Input, 255);
                  dynamicParameters.Add("@password", password, DbType.String, ParameterDirection.Input, 255);
                  var result = await c.QueryAsync<ValidateModel>(
-                    sql: "[dbo].[sp_ValidateUser]",
+                    sql: "[dbo].[spValidateUser]",
                     param: dynamicParameters,
                     commandType: CommandType.StoredProcedure);
                  return result.FirstOrDefault();
